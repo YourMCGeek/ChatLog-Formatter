@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DecliningLotus/chatlog-line-parser.git"
+    "url": "git+https://github.com/YourMCGeek/chatlog-line-parser.git"
   },
   "keywords": [
     "chatlog",
@@ -15,11 +15,12 @@
     "discord"
   ],
   "author": "Lotus - lotusdevshack.com",
+  "contributors": ["YourMCGeek - github.com/yourmcgeek"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DecliningLotus/chatlog-line-parser/issues"
+    "url": "https://github.com/YourMCGeek/chatlog-line-parser/issues"
   },
-  "homepage": "https://github.com/DecliningLotus/chatlog-line-parser#readme",
+  "homepage": "https://github.com/YourMCGeek/chatlog-line-parser#readme",
   "devDependencies": {
     "eslint": "6.8.0"
   }

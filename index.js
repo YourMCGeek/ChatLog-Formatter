@@ -26,7 +26,7 @@ class chatlogLineParser {
     //Identify username and timestamp line
     sortLine = sortUserTimeBool(line);
     if (sortLine) {
-      this.username = sortLine.username;
+      this.username = sortLine.username.trim(); 
       this.timeStamp = sortLine.timeStamp;
       this.irc = sortLine.irc;
     }
@@ -53,7 +53,7 @@ class chatlogLineParser {
 
 module.exports = chatlogLineParser;
 
-//Try to match a Discord username+timestamp format. Example : LotusYesterday at 10:38 PM, LotusToday at 7:24 AM, LotusLast Friday at 10:26 AM, Lotus07/24/2019
+//Try to match a Discord username+timestamp format. Example : LotusYesterday at 10:38 PM, LotusToday at 7:24 AM, LotusLast Friday at 10:26 AM, Lotus07/24/2019 
 function sortUserTimeBool(line) {
   const ddmmyyReg = /((0?[13578]|10|12)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[01]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1}))|(0?[2469]|11)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[0]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1})))$/;
   const daytimeReg = /(?=Last|Yesterday|Today)(.*)|((([0]?[1-9]|1[0-2])(:|\.)[0-5][0-9]((:|\.)[0-5][0-9])?( )?(AM|am|aM|Am|PM|pm|pM|Pm))|(([0]?[0-9]|1[0-9]|2[0-3])(:|\.)[0-5][0-9]((:|\.)[0-5][0-9])?))$/;
@@ -89,7 +89,7 @@ function sortUserTimeBool(line) {
   }
 
   if (sorted) {
-    sorted[0] = sorted[0].replace(/[\[\]]/g, "");
+    sorted[0] = sorted[0].replace(/[[\]]/g, "");
   }
 
   //Ternary operator but Prettier doing weird stuff with formatting.

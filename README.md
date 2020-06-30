@@ -9,10 +9,6 @@ Discord
 Slack
 IRC
 Telegram
-Possibly other services which follow a general format.
-
-Todo -
-Please suggest some!
 ```
 
 ## Purpose
@@ -98,3 +94,10 @@ let chatlog = chatlogLineParser.parse([
 
 console.log(chatlog);
 ```
+
+## Todo
+[ ] Add Skype
+[ ] Add Teamspeak
+[ ] Add Minecraft 
+[ ] Sanitize input to prevent exploiting
+[ ] Sharing, save to database send link
